@@ -1,0 +1,4 @@
+Muchas personas tienen dificultades para realizar sus tareas diarias, por temas de organización hacen que se le olvides cosas importantes.
+Solucion: Se desea crear una pequeña aplicación de línea de comandos o una web simple que permita.
+Regla 1:Agregar tareas 
+Regla 2:Listar tareas pendientes 
