@@ -3,3 +3,4 @@ Solucion: Se desea crear una pequeña aplicación de línea de comandos o una we
 Regla 1:Agregar tareas 
 Regla 2:Listar tareas pendientes 
 Regla 3:Marcar tareas como completadas
+Regla 4 : Eliminar tareas 
