@@ -1,0 +1,65 @@
+import os
+
+TODO_FILE = "tareas.txt"
+
+def cargar_tareas():
+    if not os.path.exists(TODO_FILE):
+        return []
+    with open(TODO_FILE, "r") as f:
+        return [line.strip() for line in f.readlines()]
+
+def guardar_tareas(tareas):
+    with open(TODO_FILE, "w") as f:
+        for tarea in tareas:
+            f.write(tarea + "\n")
+
+def mostrar_tareas(tareas):
+    if not tareas:
+        print("No hay tareas pendientes.")
+    else:
+        print("\nTareas pendientes:")
+        for i, tarea in enumerate(tareas, 1):
+            print(f"{i}. {tarea}")
+
+def agregar_tarea(tareas):
+    tarea = input("Escribe la nueva tarea: ")
+    tareas.append(tarea)
+    guardar_tareas(tareas)
+    print("Tarea agregada.")
+
+def eliminar_tarea(tareas):
+    mostrar_tareas(tareas)
+    try:
+        index = int(input("Número de la tarea a eliminar: ")) - 1
+        if 0 <= index < len(tareas):
+            eliminada = tareas.pop(index)
+            guardar_tareas(tareas)
+            print(f"Tarea '{eliminada}' eliminada.")
+        else:
+            print("Número inválido.")
+    except ValueError:
+        print("Entrada inválida.")
+
+def main():
+    tareas = cargar_tareas()
+    while True:
+        print("\n--- Menú ---")
+        print("1. Ver tareas")
+        print("2. Agregar tarea")
+        print("3. Eliminar tarea")
+        print("4. Salir")
+
+        opcion = input("Elige una opción: ")
+        if opcion == "1":
+            mostrar_tareas(tareas)
+        elif opcion == "2":
+            agregar_tarea(tareas)
+        elif opcion == "3":
+            eliminar_tarea(tareas)
+        elif opcion == "4":
+            break
+        else:
+            print("Opción no válida.")
+
+if _name_ == "_main_":
+    main()

@@ -2,3 +2,4 @@ Muchas personas tienen dificultades para realizar sus tareas diarias, por temas 
 Solucion: Se desea crear una pequeña aplicación de línea de comandos o una web simple que permita.
 Regla 1:Agregar tareas 
 Regla 2:Listar tareas pendientes 
+Regla 3:Marcar tareas como completadas
